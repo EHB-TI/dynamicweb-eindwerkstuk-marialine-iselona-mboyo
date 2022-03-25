@@ -48,33 +48,20 @@ input[type="password"] {
 }
 
 /*CSS register*/
-.note {
+/* body{
+    background-color: #525252;
+} */
+.centered-form {
+    margin-top: 60px;
+}
+
+.centered-form .panel {
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
+}
+
+.panel-title {
     text-align: center;
-    height: 80px;
-    background: -webkit-linear-gradient(left, #0072ff, #8811c5);
-    color: #fff;
-    font-weight: bold;
-    line-height: 80px;
-}
-
-.form-content {
-    padding: 5%;
-    border: 1px solid #ced4da;
-    margin-bottom: 2%;
-}
-
-.form-control {
-    border-radius: 1.5rem;
-}
-
-.btnSubmit {
-    border: none;
-    border-radius: 1.5rem;
-    padding: 1%;
-    width: 20%;
-    cursor: pointer;
-    background: #0062cc;
-    color: #fff;
 }
 
 /*CSS when logged in*/
