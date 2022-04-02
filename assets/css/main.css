@@ -1,0 +1,120 @@
+/*Login style*/
+body {
+    --color-error: #a12d2d;
+    --color-success: #4fe04f;
+
+    background: -webkit-linear-gradient(left, #ff3333, #ffb36c, #faff00, #ccff00);
+    border-radius: 4px;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    /* font-family: Georgia, 'Times New Roman', Times, serif; */
+}
+
+.container_login {
+    max-width: 420px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 40px rgb(0, 0, 0, 0.2);
+    padding: 1.50rem;
+    margin: 0 auto;
+    background-color: rgba(252, 224, 149, 0.842);
+    border: 3px dotted rgba(0, 0, 0, 0.1);
+}
+
+.container_login,
+.button,
+.username,
+.password {
+    font: 500 1rem 'Quicksand', sans-serif;
+}
+
+.form_hidden {
+    display: none;
+}
+
+.title_login {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.login_message {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.login_message_success {
+    color: var(--color-success);
+}
+
+.login_message_error {
+    color: var(--color-error);
+}
+
+.input_group {
+    margin: 1rem;
+}
+
+.username,
+.password {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid #dddddd;
+    outline: none;
+    background: #eeeeee;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.username:focus,
+.password:focus {
+    border-color: #71ff54;
+    background: rgb(255, 255, 255);
+}
+
+.input_error_message {
+    margin-top: 0.5rem;
+    font-size: 0.05rem;
+    color: var(--color-error);
+    border-color: var(--color-error);
+}
+
+.button {
+    width: 100%;
+    padding: 0.50rem 0.75rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #383838;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background: #b4ffb1;
+}
+
+.button:hover {
+    background: #76df76;
+}
+
+.button:active {
+    transform: scale(0.95);
+}
+
+.form_text {
+    text-align: center;
+}
+
+.newAccount {
+    color: #383838;
+    text-decoration: none;
+    cursor: pointer;
+
+}
+
+.newAccount:hover {
+    text-decoration: underline;
+}

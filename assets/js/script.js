@@ -1,8 +1,6 @@
 console.log("It's working!!");
 
-//Create a user account
 
-//Login system
 let users = [
     {
         username: "lina",
@@ -14,9 +12,26 @@ let users = [
     }
 ]
 
+//Create a user account
+function registerUser() {
+    let regUser = document.getElementById("newUser").value
+    let regPassword = document.getElementById("newPassword").value
+    // let regEmail = document.getElementById("newEmail").value
+    let newUser = {
+        username: regUser,
+        password: regPassword
+    }
+
+    users.push(newUser);
+    console.log(users);
+}
+
+
+//Login system
 function loggedIn() {
     let username = document.getElementById("username").value
     let password = document.getElementById("password").value
+    
     console.log("you're username is: " + username + " and your password is " + password);
 
     for(i = 0; i < users.length; i++){
@@ -28,4 +43,7 @@ function loggedIn() {
     console.log("Username or password is incorrect");
 }
 
-console.log(loggedIn);
+// console.log(loggedIn);
+
+
+
