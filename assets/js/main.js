@@ -23,3 +23,36 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 
 })
+
+
+//Login system
+
+let users = [
+    {
+        username: "lina",
+        password: "a"
+    },
+    {
+        username: "john",
+        password: "academy10"
+    }
+]
+
+document.getElementById('myForm').addEventListener('submit', function (event) {
+    event.preventDefault();
+    let username = document.getElementsByClassName("username").value
+    let password = document.getElementsByClassName("password").value
+    
+    console.log("you're username is: " + username + " and your password is " + password);
+
+    for(i = 0; i < users.length; i++){
+        if (username == users[i].username && password == users[i].password) {
+            console.log(username + " is logged in.");
+            window.location.href = "../profile.html";
+            return false;
+        }
+    }
+    console.log("Username or password is incorrect");
+
+    
+});

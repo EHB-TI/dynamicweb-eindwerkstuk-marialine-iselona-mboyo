@@ -4,7 +4,7 @@ console.log("It's working!!");
 let users = [
     {
         username: "lina",
-        password: "loops123"
+        password: "a"
     },
     {
         username: "john",
@@ -26,9 +26,10 @@ function registerUser() {
     console.log(users);
 }
 
-
 //Login system
-function loggedIn() {
+
+document.getElementById('myForm').addEventListener('submit', function (event) {
+    event.preventDefault();
     let username = document.getElementById("username").value
     let password = document.getElementById("password").value
     
@@ -37,11 +38,15 @@ function loggedIn() {
     for(i = 0; i < users.length; i++){
         if (username == users[i].username && password == users[i].password) {
             console.log(username + " is logged in.");
-            return
+            window.location.href = "profile.html";
+            return false;
         }
     }
     console.log("Username or password is incorrect");
-}
+
+    
+});
+
 
 // console.log(loggedIn);
 

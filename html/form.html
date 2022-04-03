@@ -15,30 +15,39 @@
 
     <!--Login form-->
 
-    <div class="container_login">
-        <form class="form_login" id="login">
-            <h1 class="title_login">Login</h1>
+    <div id="login" class="container_login">
+        <form id="myForm" class="form_login">
+
+            <h1 class="title_login">Welcome Back! Please Sign In</h1>
+            <hr class="colorline"><br>
+
             <div class="login_message login_message_error"></div>
+
             <div class="input_group">
-                <input type="text" class="username" autofocus placeholder="Username">
+                <input type="text" id="username" class="username" autofocus placeholder="Username" required="">
                 <div class="input_error_message"></div>
             </div>
+
             <div class="input_group">
-                <input type="password" class="password" autofocus placeholder="Password">
+                <input type="password" id="password" class="password" autofocus placeholder="Password" required="">
                 <div class="input_error_message"></div>
             </div>
+
             <p class="form_text">
                 <a href="#" class="newAccount" id="linkCreateAccount">Don't have an account? Create account</a>
             </p>
-            <button class="button" type="submit">Sign in</button>
+
+            <!-- <button class="button" type="submit" href="../html/profile.html">Sign in</button> -->
+            <input type="submit" class="button" value="Sign In">
+
         </form>
     </div>
 
 
     <!--Create account form-->
 
-    <div class="container_login">
-        <form class="form_login form_hidden" id="createAccount">
+    <div id="createAccount" class="container_login form_hidden">
+        <form class="form_login">
             <h1 class="title_login">Create account</h1>
             <div class="login_message login_message_error"></div>
             <div class="input_group">
@@ -63,31 +72,6 @@
             <button class="button" type="submit">Register</button>
         </form>
     </div>
-
-
-    <!--Profile page-->
-
-    <div class="container-profile">
-        <header>Welcome back!</header>
-        <div class="topbar">
-            <a href="">Quotes</a>
-            <a href="">Sign out</a>
-        </div>
-        <div class="body-profile">
-            <div class="profile">
-                <img src="../assets/img/" alt="Profile_Picture">
-                <h3>Lina Loops</h3>
-                <ul>
-                    <li>Email Address: loops@example.com</li>
-                </ul>
-            </div>
-            <div class="savedQuotes">
-                <h3>Saved Quotes</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quibusdam a nobis laborum aliquam in nisi nulla officia repudiandae sint magni doloremque eaque, provident illo nemo atque. Excepturi, iure adipisci.</p>
-            </div>
-        </div>
-    </div>
-
 
     <script src="../assets/js/main.js"></script>
 </body>
