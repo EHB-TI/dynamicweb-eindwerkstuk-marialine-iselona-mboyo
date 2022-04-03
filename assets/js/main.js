@@ -56,3 +56,27 @@ document.getElementById('myForm').addEventListener('submit', function (event) {
 
     
 });
+
+
+//Quotes
+
+let data;
+
+let quote = document.getElementsById("quote");
+let author = document.getElementsById("author");
+let button = document.getElementsByClassName("btn-click");
+
+const url = "https://type.fit/api/quotes";
+
+let nextQuote = () => {
+
+    fetch(url)
+        .then((data) => data.json())
+        .then((item) => {
+            quote.innerText = item.content;
+            author.innerText = item.author;
+        });
+}
+
+window.addEventListener("load", getQuote);
+btn.addEventListener("click", getQuote)
