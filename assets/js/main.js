@@ -1,82 +1,36 @@
 console.log("It's working!");
 
-//Login and Create Accoun: form switching
-
-document.addEventListener("DOMContentLoaded", () => {
-    const loginForm = document.querySelector("#login");
-    const createAccountForm = document.querySelector("#createAccount");
-
-    /* When you click on "Create Account", the login from will be hidden but 
-    you will be able to see de create form */
-    document.querySelector("#linkCreateAccount").addEventListener("click", e =>{
-        e.preventDefault(); //It's not going to redirect via the href in the HTML
-        loginForm.classList.add("form_hidden");
-        createAccountForm.classList.remove("form_hidden");
-    })
-
-    /* When you click on "Login", the Create form will be hidden but 
-    you will be able to see de Login form */
-    document.querySelector("#linkLogin").addEventListener("click", e =>{
-        e.preventDefault();
-        loginForm.classList.remove("form_hidden");
-        createAccountForm.classList.add("form_hidden");
-    })
-
-})
-
-
-//Login system
-
-let users = [
-    {
-        username: "lina",
-        password: "a"
-    },
-    {
-        username: "john",
-        password: "academy10"
-    }
-]
-
-document.getElementById('myForm').addEventListener('submit', function (event) {
-    event.preventDefault();
-    let username = document.getElementsByClassName("username").value
-    let password = document.getElementsByClassName("password").value
-    
-    console.log("you're username is: " + username + " and your password is " + password);
-
-    for(i = 0; i < users.length; i++){
-        if (username == users[i].username && password == users[i].password) {
-            console.log(username + " is logged in.");
-            window.location.href = "../profile.html";
-            return false;
-        }
-    }
-    console.log("Username or password is incorrect");
-
-    
-});
-
-
 //Quotes
 
-let data;
+// //Getting the quote, author & button of next quote
+// let quote = document.getElementsByClassName("quote-text");
+// let author = document.getElementsByClassName("author");
+// let newQuoteBtn = document.getElementsByClassName("btn-click-newQuote");
 
-let quote = document.getElementsById("quote");
-let author = document.getElementsById("author");
-let button = document.getElementsByClassName("btn-click");
+// //Adding API link
+// const url = 'https://type.fit/api/quotes';
 
-const url = "https://type.fit/api/quotes";
+// let getQuote = async() => {
+//     fetch(url)
+//     .then(response => response.json())
+//     .then((item) => {
+//         quote.innerText = item.content;
+//         author.innerText = item.author;
+//     });
+// };
 
-let nextQuote = () => {
+// window.addEventListener("load", getQuote);
+// newQuoteBtn.addEventListener("click", getQuote)
 
-    fetch(url)
-        .then((data) => data.json())
-        .then((item) => {
-            quote.innerText = item.content;
-            author.innerText = item.author;
-        });
-}
 
-window.addEventListener("load", getQuote);
-btn.addEventListener("click", getQuote)
+
+fetch('https://type.fit/api/quotes')
+.then(res => {
+    if (res.ok) {
+        console.log('SUCCESS');
+    } else {
+        console.log("Not Successful");
+    }
+})
+.then(data => console.log(data))
+.catch(error => console.log('ERROR'))

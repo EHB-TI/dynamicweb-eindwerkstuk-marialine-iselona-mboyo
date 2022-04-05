@@ -81,7 +81,48 @@ body{
     transition: all 0.2s ease;
 }
 
+.btn-click-newQuote{
+    font-size:15px;
+    border: none;
+	border-radius: 5px;
+	cursor:pointer;
+	padding: 13px 22px;
+	margin-top: 5px;
+	background: linear-gradient(to right bottom, #ed4264a8, #ffedbca8);
+    transition: all 0.2s ease;
+}
+
 .btn-click:hover{
     color: whitesmoke;
     background: #e9bea5;
+}
+
+.btn-click-newQuote:hover{
+    color: whitesmoke;
+    background: #e9bea5;
+}
+
+/* .block__main {
+	min-width: 45vw;
+	position: absolute;
+	transition: all .8s ease;
+	backface-visibility: hidden;
+	box-shadow: 0rem 1.5rem 4rem rgba(0, 0, 0, 0.15);
+	border-radius: .5rem;
+	background-image: linear-gradient(to right bottom, #F6F0EA,#F1DFD1);
+} */
+
+.block__back {
+	transform: rotateY(180deg);
+}
+.header-back{
+    transform: rotateY(180deg);
+}
+
+.rotateF{
+transform: rotateY(-180deg);
+}
+
+.rotateB{
+transform: rotate(0deg);
 }
