@@ -5,41 +5,74 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <title>Log In</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/main.css">
 </head>
 
-<body>
+<body id="body-login">
     <!--HTML Login-->
-    <a href="../index.html">To quote</a>
-    <a href="./register.html">To register</a>
-    <a href="./profile.html">To profile</a>
 
-    <div class="container_login">
+    <div id="login" class="container_login">
         <div class="wrapper">
             <form name="Login_Form" id="myForm" class="form-signin">
-                
-                <h3 class="form-signin-heading">Welcome Back! Please Sign In</h3>
-                <hr class="colorline"><br>
+               
+            <h1 class="title_login">Welcome Back! Please Sign In</h1>
+            <hr class="colorline"><br>
 
-                <input type="text" class="form-control" id="username" name="Username" placeholder="Username" required="" />
-                <input type="password" class="form-control" id="password" name="Password" placeholder="Password" required="" />
+            <div class="login_message login_message_error"></div>
 
-                <label>Don't have an account? <a href="./register.html">Please sign up!</a> </label>
+            <div class="input_group">
+                <input type="text" id="username" class="username" autofocus placeholder="Username" required="">
+                <div class="input_error_message"></div>
+            </div>
 
-                <div class="row">
-                    <div class="col-xs-6 col-sm-6 col-md-6">
-                        <input type="submit" class="btn btn-lg btn-success btn-block" value="Sign In">
-                    </div>
-                    <div class="col-xs-6 col-sm-6 col-md-6">
-                        <a href="./register.html" class="btn btn-lg btn-primary btn-block">Register</a>
-                    </div>
-                </div>
+            <div class="input_group">
+                <input type="password" id="password" class="password" autofocus placeholder="Password" required="">
+                <div class="input_error_message"></div>
+            </div>
+
+            <p class="form_text">
+                <a href="#" class="newAccount" id="linkCreateAccount">Don't have an account? Create account</a>
+            </p>
+
+            <!-- <button class="button" type="submit" href="../html/profile.html">Sign in</button> -->
+            <input type="submit" class="button" value="Sign In">
+
             </form>
         </div>
+    </div>
+
+
+    <!--Create account form-->
+
+    <div id="createAccount" class="container_login form_hidden">
+        <form class="form_login">
+            <h1 class="title_login">Create account</h1>
+            <div class="login_message login_message_error"></div>
+            <div class="input_group">
+                <input type="text" class="username" autofocus placeholder="Username">
+                <div class="input_error_message"></div>
+            </div>
+            <div class="input_group">
+                <input type="text" class="username" autofocus placeholder="Email Address">
+                <div class="input_error_message"></div>
+            </div>
+            <div class="input_group">
+                <input type="password" class="password" autofocus placeholder="Password">
+                <div class="input_error_message"></div>
+            </div>
+            <div class="input_group">
+                <input type="password" class="password" autofocus placeholder="Confirm Password">
+                <div class="input_error_message"></div>
+            </div>
+            <p class="form_text">
+                <a href="#" class="newAccount" id="linkLogin">Already have an account? Please, Sign In</a>
+            </p>
+            <button class="button" type="submit">Register</button>
+        </form>
     </div>
 
     <script src="../assets/js/script.js"></script>

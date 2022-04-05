@@ -1,8 +1,8 @@
-body {
+#body-login {
     --color-error: #a12d2d;
     --color-success: #4fe04f;
 
-    background: -webkit-linear-gradient(left, #ff3333, #ffb36c, #faff00, #ccff00);
+    background: linear-gradient(to left top, #e50000f5, #ffb36cf5, #faff00f5, #ccff00f5, #04af46c5); 
     border-radius: 4px;
     margin: 0;
     height: 100vh;
@@ -23,7 +23,7 @@ body {
     box-shadow: 0 0 40px rgb(0, 0, 0, 0.2);
     padding: 1.50rem;
     margin: 0 auto;
-    background-color: rgba(254, 247, 227, 0.793);
+    background-color: rgba(255, 251, 240, 0.793);
     border: 3px dotted rgba(0, 0, 0, 0.1);
 }
 
@@ -33,6 +33,10 @@ body {
 .password {
     font: 500 1rem 'Quicksand', sans-serif;
 }
+
+/* .wrapper{
+    background: linear-gradient(to left top, #e50000f5, #ffb36cf5, #faff00f5, #ccff00f5, #04af46c5);
+} */
 
 .form_hidden {
     display: none;
@@ -140,22 +144,23 @@ body {
     height: 600px;
     margin-left: auto;
     margin-right: auto;
-    background-color: #faf4ea;
+    background-color: #faf4ea91;
     font: 500 1rem 'Quicksand', sans-serif;
-    border-radius: 5px;
+    border: 2px dashed rgb(255, 162, 0);
+    border-radius: 15px;
 }
 
 header {
     font-size: 2rem;
     text-align: center;
-    background-color: #ffffff;
-    padding: 10px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    background-color: #faf4ea91;
+    padding: 5px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 }
 
 .topbar {
-    background-color: #ffffffd2;
+    background-color: #faf4ea91;
     overflow: hidden;
 }
 
@@ -176,24 +181,26 @@ header {
     float: left;
     width: 30%;
     height: 450px;
-    background-color: #f5deb3;
+    background-color: #f6e5c6;
+    border-radius: 15px;
 }
 
 .profile h3 {
-    text-align: center;
+    margin: 0px 15px;
     padding: 0px;
     width: 250px;
 }
 
 .profile img {
-    width: 200px;
-    height: 200px;
-    margin-left: 25px;
-    border: 3px solid #ff6600;
+    width: 150px;
+    height: 120px;
+    margin: 15px;
+    border: 3px dashed #ff66006d;
 }
 
-ul {
-    list-style-type: none;
+.profile p{
+    margin: 0px 15px;
+    width: 200px;
 }
 
 .savedQuotes {
