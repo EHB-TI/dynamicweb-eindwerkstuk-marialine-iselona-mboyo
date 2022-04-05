@@ -1,8 +1,8 @@
-#body-login {
+#body-login{
     --color-error: #a12d2d;
     --color-success: #4fe04f;
 
-    background: linear-gradient(to left top, #e50000f5, #ffb36cf5, #faff00f5, #ccff00f5, #04af46c5); 
+    background: linear-gradient(to left top, #e50000f5, #ffb36cf5, #faff00f5, #ccff00f5, #04af46c5);
     border-radius: 4px;
     margin: 0;
     height: 100vh;
@@ -15,6 +15,26 @@
 
 
 /*Login and register style*/
+
+@keyframes color {
+    0%   { background: #deb68a; }
+    10%  { background: #e7c8a0; }
+    20%  { background: #f4f4d5; }
+    20%  { background: #CCD5AE; }
+    40%  { background: #E9EDC9; }
+    60%  { background: #FEFAE0; }
+    80%  { background: #FAEDCD; }
+    100% { background: #D4A373; }
+  }
+
+#body-profile{
+         
+        background: #33CCCC; /* Fallback */
+        animation: color 9s infinite linear;
+        text-align: center;
+        padding: 2em;
+}
+
 
 .container_login {
     max-width: 420px;
@@ -34,9 +54,9 @@
     font: 500 1rem 'Quicksand', sans-serif;
 }
 
-/* .wrapper{
+.wrapper{
     background: linear-gradient(to left top, #e50000f5, #ffb36cf5, #faff00f5, #ccff00f5, #04af46c5);
-} */
+}
 
 .form_hidden {
     display: none;

@@ -3,9 +3,9 @@ console.log("It's working!");
 //Quotes
 
 // //Getting the quote, author & button of next quote
-let quote = document.getElementsById("text");
-let author = document.getElementsById("author");
-let newQuoteBtn = document.getElementsByClassName("btn-click-newQuote");
+// let quote = document.getElementsById("text");
+// let author = document.getElementsById("author");
+// let newQuoteBtn = document.getElementsByClassName("btn-click-newQuote");
 
 // //Adding API link
 // const url = 'https://type.fit/api/quotes';
