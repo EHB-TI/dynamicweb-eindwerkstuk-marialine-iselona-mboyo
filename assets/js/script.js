@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 })
 
-
+//--------------------------------------------------------------------------------------
 
 
 let users = [
@@ -56,9 +56,7 @@ function registerUser() {
 
 
 //Login system
-/*
-Route to another page onsubmit
-*/
+// Route to another page onsubmit
 
 document.getElementById('myForm').addEventListener('submit', function (event) {
     event.preventDefault();
@@ -80,5 +78,6 @@ document.getElementById('myForm').addEventListener('submit', function (event) {
     
 });
 
+//-------------------------------------------------------------------------------------
 
 //From profile to Quotes

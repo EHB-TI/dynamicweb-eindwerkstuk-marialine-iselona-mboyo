@@ -2,6 +2,36 @@ console.log("It's working!");
 
 //Quotes
 
+//Getting the quote, author & button of next quote
+ const quote = document.querySelector("#text");
+ const author = document.querySelector("#author");
+ const newQuoteBtn = document.querySelector(".btn-click-newQuote");
+
+
+async function getQuote() {
+    const response = await fetch("https://type.fit/api/quotes")
+    const data = await response.json();
+    const num = Math.floor(Math.random()*data.length);
+    const item = data[num];
+
+    const quotes = item.text;
+    const authorName = item.author;
+    quote.innerText = quotes;
+    author.innerText = authorName;
+    // console.log(item);
+
+    if(!author){
+        authorName = "Anonymous"
+    }
+}
+
+newQuoteBtn.addEventListener("click", getQuote);
+
+getQuote()
+
+//---------------------------------------------------------------------------
+// OLD CODES
+
 // //Getting the quote, author & button of next quote
 // let quote = document.getElementsById("text");
 // let author = document.getElementsById("author");
@@ -22,15 +52,22 @@ console.log("It's working!");
 //window.addEventListener("load", getQuote);
  //newQuoteBtn.addEventListener("click", getQuote)
 
-async function getQuote() {
-    const response = await fetch("https://type.fit/api/quotes")
-    const data = await response.json();
 
-console.log(data);
-}
 
-getQuote()
+// const quote = document.querySelector("#text");
+// const author = document.querySelector("#author");
+// const newQuoteBtn = document.querySelector(".btn-click-newQuote");
 
+// newQuoteBtn.addEventListener("click", newQuote);
+
+// function newQuote() {
+//     fetch('https://type.fit/api/quotes')
+//     .then(response => response.json())
+//     .then(data => {
+//         quote.innerHTML = `"${data.content}"`;
+//         author.innerHTML = data.author;
+//     })
+// }
 
 
 
@@ -54,20 +91,3 @@ getQuote()
 // .then(post => {
 // console.log(post.title);
 // });
-
-
-
-const quote = document.querySelector("#text");
-const author = document.querySelector("#author");
-const newQuoteBtn = document.querySelector(".btn-click-newQuote");
-
-newQuoteBtn.addEventListener("click", newQuote);
-
-function newQuote() {
-    fetch('https://type.fit/api/quotes')
-    .then(response => response.json())
-    .then(data => {
-        quote.innerHTML = `"${data.content}"`;
-        author.innerHTML = data.author;
-    })
-}

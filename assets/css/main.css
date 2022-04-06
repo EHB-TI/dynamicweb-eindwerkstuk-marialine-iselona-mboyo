@@ -54,9 +54,9 @@
     font: 500 1rem 'Quicksand', sans-serif;
 }
 
-.wrapper{
+/* .wrapper{
     background: linear-gradient(to left top, #e50000f5, #ffb36cf5, #faff00f5, #ccff00f5, #04af46c5);
-}
+} */
 
 .form_hidden {
     display: none;
