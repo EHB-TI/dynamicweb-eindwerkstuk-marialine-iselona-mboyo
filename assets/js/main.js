@@ -27,7 +27,6 @@ async function getQuote() {
     const data = await response.json();
 
 console.log(data);
-
 }
 
 getQuote()
@@ -35,23 +34,40 @@ getQuote()
 
 
 
-fetch('https://type.fit/api/quotes')
- .then(res => {
-     if (res.ok) {
-         console.log('SUCCESS');
-     } else {
-         console.log("Not Successful");
-     }
- })
- .then(data => console.log(data))
- .catch(error => console.log('ERROR'))
+// fetch('https://type.fit/api/quotes')
+//  .then(res => {
+//      if (res.ok) {
+//          console.log('SUCCESS');
+//      } else {
+//          console.log("Not Successful");
+//      }
+//  })
+//  .then(data => console.log(data))
+//  .catch(error => console.log('ERROR'))
 
 
 
-fetch('https://type.fit/api/quotes')
-.then(data => {
-return data.json();
-})
-.then(post => {
-console.log(post.title);
-});
+// fetch('https://type.fit/api/quotes')
+// .then(data => {
+// return data.json();
+// })
+// .then(post => {
+// console.log(post.title);
+// });
+
+
+
+const quote = document.querySelector("#text");
+const author = document.querySelector("#author");
+const newQuoteBtn = document.querySelector(".btn-click-newQuote");
+
+newQuoteBtn.addEventListener("click", newQuote);
+
+function newQuote() {
+    fetch('https://type.fit/api/quotes')
+    .then(response => response.json())
+    .then(data => {
+        quote.innerHTML = `"${data.content}"`;
+        author.innerHTML = data.author;
+    })
+}

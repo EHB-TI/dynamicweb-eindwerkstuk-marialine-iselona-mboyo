@@ -1,6 +1,6 @@
 console.log("It's working!!");
 
-//Login and Create Accoun: form switching
+//Login and Create Account: form switching
 
 document.addEventListener("DOMContentLoaded", () => {
     const loginForm = document.querySelector("#login");
@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 
 })
+
 
 
 
@@ -51,10 +52,12 @@ function registerUser() {
     console.log(users);
 }
 
+
+
+
 //Login system
 /*
 Route to another page onsubmit
-
 */
 
 document.getElementById('myForm').addEventListener('submit', function (event) {
