@@ -38,10 +38,16 @@ let users = [{
 ]
 
 //Create a user account
-function registerUser() {
+
+const form = document.getElementById("reg-form");
+form.addEventListener('submit', registerUser)
+
+//Send data as JSON
+function registerUser(ev) {
+    ev.preventDefault()
     let regUser = document.getElementById("newUser").value
     let regPassword = document.getElementById("newPassword").value
-    // let regEmail = document.getElementById("newEmail").value
+
     let newUser = {
         username: regUser,
         password: regPassword
