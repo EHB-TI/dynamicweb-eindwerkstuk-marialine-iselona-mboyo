@@ -5,64 +5,77 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quote Box</title>
-    <link rel="stylesheet" href="assets/css/index.css">
+    <title>Log in</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
 </head>
 
-<body>
-    <!--HTML Quotes-->
-   <div class="wrapper">
+<body id="body-login">
 
-       <div class="container-quotes">
-            <header>Quote of the day</header>
-            <div class="quote-box block__main block__front">
+    <div id="login" class="container_login">
+        <div class="wrapper">
+            <form name="Login_Form" id="myForm" class="form-signin">
 
-                <div class="content quote-recto">
-                    <i class="fas fa-quote-left"></i>
-                    <p id="text" class="text">Text will be here</p>
-                    <i class="fas fa-quote-right"></i>
+                <h1 class="title_login">Welcome Back! Please Sign In</h1>
+                <hr class="colorline"><br>
+
+                <div class="login_message login_message_error"></div>
+
+                <div class="input_group">
+                    <input type="text" id="username" class="username" autofocus placeholder="Username" required="">
+                    <div class="input_error_message"></div>
                 </div>
 
-                <div id="author" class="author">
-                    Author will be here
+                <div class="input_group">
+                    <input type="password" id="password" class="password" autofocus placeholder="Password" required="">
+                    <div class="input_error_message"></div>
                 </div>
 
-                <div class="btn">
-                    <button class="btn-click" onclick="AddToProfile()">Add To profile</button>
-                    <button class="btn-click-newQuote">Next Quote</button>
-                </div>
-            
-            </div>
+                <p class="form_text">
+                    <a href="#" class="newAccount" id="linkCreateAccount">Don't have an account? Create account</a>
+                </p>
+
+                <!-- <button class="button" type="submit" href="../html/profile.html">Sign in</button> -->
+                <input type="submit" class="button" value="Sign In">
+
+            </form>
         </div>
-   
-
-   
-        <!-- <div class="container-quotes">
-            <header class="header-back">Quote of the day</header>
-            <div class="quote-box block__main block__back">
-
-                <div class="content quote-recto">
-                    <i class="fas fa-quote-left"></i>
-                    <p id="quote" class="quote-text">Text will be here</p>
-                    <i class="fas fa-quote-right"></i>
-                </div>
-
-                 <div id="author" class="author">
-                    Author will be here
-                </div>
-
-                <div class="btn">
-                    <button class="btn-click" onclick="AddToProfile()">Add To profile</button>
-                    <button class="btn-click-newQuote" onclick="newQuote()">Next Quote</button>
-                 </div>
-
-            </div>
-        </div> -->
-
     </div>
-    
 
-    <script src="./assets/js/main.js"></script>
+
+    <!--Create account form-->
+
+    <div id="createAccount" class="container_login form_hidden">
+        <form class="form_login">
+            <h1 class="title_login">Create account</h1>
+            <div class="login_message login_message_error"></div>
+            <div class="input_group">
+                <input type="text" class="username" autofocus placeholder="Username" required="">
+                <div class="input_error_message"></div>
+            </div>
+            <div class="input_group">
+                <input type="text" class="username" autofocus placeholder="Email Address">
+                <div class="input_error_message"></div>
+            </div>
+            <div class="input_group">
+                <input type="password" class="password" autofocus placeholder="Password" required="">
+                <div class="input_error_message"></div>
+            </div>
+            <div class="input_group">
+                <input type="password" class="password" autofocus placeholder="Confirm Password" required="">
+                <div class="input_error_message"></div>
+            </div>
+            <p class="form_text">
+                <a href="#" class="newAccount" id="linkLogin">Already have an account? Please, Sign In</a>
+            </p>
+            <button class="button" type="submit">Register</button>
+        </form>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+
 </body>
 
 </html>
