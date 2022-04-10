@@ -3,26 +3,21 @@ console.log("It's working!");
 //Quotes
 
 //Getting the quote, author & button of next quote
- const quote = document.querySelector("#text");
- const author = document.querySelector("#author");
- const newQuoteBtn = document.querySelector(".btn-click-newQuote");
+const quote = document.querySelector("#text");
+const author = document.querySelector("#author");
+const newQuoteBtn = document.querySelector(".btn-click-newQuote");
 
 
 async function getQuote() {
     const response = await fetch("https://type.fit/api/quotes")
     const data = await response.json();
-    const num = Math.floor(Math.random()*data.length);
+    const num = Math.floor(Math.random() * data.length);
     const item = data[num];
 
     const quotes = item.text;
-    const authorName = item.author;
+    let authorName = item.author || "Anonymous";
     quote.innerText = quotes;
     author.innerText = authorName;
-    // console.log(item);
-
-    if(!author){
-        authorName = "Anonymous"
-    }
 }
 
 newQuoteBtn.addEventListener("click", getQuote);
@@ -50,7 +45,7 @@ getQuote()
 // };
 
 //window.addEventListener("load", getQuote);
- //newQuoteBtn.addEventListener("click", getQuote)
+//newQuoteBtn.addEventListener("click", getQuote)
 
 
 

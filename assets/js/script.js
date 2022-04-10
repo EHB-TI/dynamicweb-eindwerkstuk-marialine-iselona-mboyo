@@ -1,5 +1,3 @@
-console.log("It's working!!");
-
 //Login and Create Account: form switching
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -74,7 +72,7 @@ document.getElementById('myForm').addEventListener('submit', function (event) {
     for (i = 0; i < users.length; i++) {
         if (username == users[i].username && password == users[i].password) {
             console.log(username + " is logged in.");
-            window.location.href = 'profile.html';
+            window.location.href = 'html/profile.html';
             return false;
         }
     }
