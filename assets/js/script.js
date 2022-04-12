@@ -77,8 +77,8 @@ document.getElementById('myForm').addEventListener('submit', function (event) {
     let username = document.getElementById("username").value
     let password = document.getElementById("password").value
 
-    console.log("you're username is: " + username + " and your password is " +
-        password);
+    // console.log("you're username is: " + username + " and your password is " +
+    //     password);
 
     for (i = 0; i < users.length; i++) {
         if (username == users[i].username && password == users[i].password) {
