@@ -99,10 +99,12 @@
 
 .login_message_success {
     color: var(--color-success);
+
 }
 
 .login_message_error {
     color: var(--color-error);
+    border-color: var(--color-error);
 }
 
 .input_group {

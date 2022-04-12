@@ -24,12 +24,14 @@
                 <div class="login_message login_message_error"></div>
 
                 <div class="input_group">
-                    <input type="text" id="username" class="username" autofocus placeholder="Username" required="">
+                    <input type="text" id="username" name="username" class="username" autofocus placeholder="Username"
+                        required="">
                 </div>
 
                 <div class="input_group">
-                    <input type="password" id="password" class="password" autofocus placeholder="Password" required="">
-                    <div class="input_error_message">Username or password is incorrect</div>
+                    <input type="password" id="password" name="password" class="password" autofocus
+                        placeholder="Password" required="">
+                    <div id="input_error_message" class="input_error_message"></div>
                 </div>
 
                 <p class="form_text">

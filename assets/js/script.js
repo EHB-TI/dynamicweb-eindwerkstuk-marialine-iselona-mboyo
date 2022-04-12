@@ -1,3 +1,14 @@
+//Error message
+
+function errorMessage(formEle, type, message) {
+    const messageEle = formEle.querySelector(".input_error_message")
+
+    messageEle.textContent = message;
+    messageEle.classList.remove("input_error_message");
+    messageEle.classList.add(`input_error_message--${type}`);
+}
+
+
 //Login and Create Account: form switching
 
 document.addEventListener("DOMContentLoaded", () => {
