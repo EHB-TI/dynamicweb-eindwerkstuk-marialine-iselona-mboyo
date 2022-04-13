@@ -36,34 +36,53 @@ document.addEventListener("DOMContentLoaded", () => {
 //--------------------------------------------------------------------------------------
 
 
-let users = [{
-        username: "lina",
-        password: "a"
-    },
-    {
-        username: "john",
-        password: "academy10"
-    }
-]
+// let users = [{
+//         username: "lina",
+//         password: "a"
+//     },
+//     {
+//         username: "john",
+//         password: "academy10"
+//     }
+// ]
 
 //Create a user account
 
 const form = document.getElementById("reg-form");
 form.addEventListener('submit', registerUser)
 
+
+function httpPost(url, body) {
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open("POST", url, false); // false for synchronous request
+    xmlHttp.setRequestHeader('Content-type', 'application/json; charset=UTF-8')
+    xmlHttp.send(body);
+    xmlHttp.onload = function () {
+        if (xmlHttp.status === 201) {
+            console.log("Post successfully created!")
+            return xmlHttp.responseText;
+        }
+    }
+
+}
+
+
 //Send data as JSON
 function registerUser(ev) {
     ev.preventDefault()
-    let regUser = document.getElementById("newUser").value
-    let regPassword = document.getElementById("newPassword").value
+    const regUser = document.getElementById("newUser").value
+    const regPassword = document.getElementById("newPassword").value
 
-    let newUser = {
+    const newUser = {
         username: regUser,
         password: regPassword
     }
 
-    users.push(newUser);
-    console.log(users);
+    const post = JSON.stringify(newUser);
+
+    httpPost("http://localhost:3000/users", post);
+
+    console.log("object");
 }
 
 
