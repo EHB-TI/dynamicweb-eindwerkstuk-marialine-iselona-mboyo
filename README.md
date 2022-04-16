@@ -126,5 +126,7 @@ And of course, all those persons who made these documentations below. I wouldn't
   <li><a href="https://www.codegrepper.com/code-examples/javascript/javascript+send+https+request">Javascript send https request</a></li>
   <li><a href="https://medium.com/zero-equals-false/using-cors-in-express-cac7e29b005b">Using CORS in Express</a></li>
   <li><a href="https://www.codegrepper.com/code-examples/javascript/post+request+javascript">Post request javascript</a></li>
+  <li><a href="https://code.tutsplus.com/articles/create-a-javascript-ajax-post-request-with-and-without-jquery--cms-39195">	
+Create a JavaScript AJAX Post Request: With and Without jQuery</a></li>
 </ul>
 
