@@ -81,7 +81,8 @@ Login in first: <br>
 I would like to thank all the people who have helped me from near or far. My family and friends. <br>
 And of course, all those persons who made these documentations below. I wouldn't have learn oall of this without this.
 
-<h4>Profile</h4>
+<h4>Resources</h4>
+<h5>Profile</h5>
 <ul>
   <li><a href="https://www.youtube.com/watch?v=pMBgvktESDM&ab_channel=CodingMarket">How to create the User Profile Card Using HTML and CSS</a></li>
   <li><a href="https://www.youtube.com/watch?v=CDe5wfHAlAY&ab_channel=DynamicWebZone">Profile Page in Html Css</a></li>
@@ -93,7 +94,7 @@ And of course, all those persons who made these documentations below. I wouldn't
 </ul>
 
 
-<h4>Login & Register</h4>
+<h5>Login & Register</h5>
 <ul>
   <li><a href="https://www.youtube.com/watch?v=9zzX2fbkzWU&ab_channel=CodingNepal">Login Form Validation using HTML CSS & Javascript</a></li>
   <li><a href="https://www.youtube.com/watch?v=3GsKEtBcGTk&ab_channel=dcode">How to Build a Login & Sign Up Form with HTML, CSS & JavaScript - Web Development Tutorial</a></li>
@@ -106,7 +107,7 @@ And of course, all those persons who made these documentations below. I wouldn't
   <li><a href="https://codeshack.io/basic-login-system-nodejs-express-mysql/#gettingstarted">Basic Login System with Node.js, Express, and MySQL</a></li>
 </ul>
 
-<h4>Quote Generator</h4>
+<h5>Quote Generator</h5>
 <ul>
   <li><a href="https://tekolio.com/how-to-create-a-random-quote-generator-with-random-color/">How to Create a Random Quote Generator using an API?</a></li>
   <li><a href="https://www.codeleaks.io/random-quote-generator-using-html-css-and-javascript/#JavaScript_Section">HOW TO BUILD RANDOM QUOTE GENERATOR USING HTML, CSS AND JS?</a></li>
@@ -116,7 +117,8 @@ And of course, all those persons who made these documentations below. I wouldn't
   <li><a href="https://www.youtube.com/watch?v=aUPeASfr944&ab_channel=DeepakKumar">JavaScript Fetch API - Quote Generator</a></li>
   <li><a href="https://www.youtube.com/watch?v=2TjvDPNBgXo&ab_channel=GeekProbin">Random Quote Generator Using API | Vanilla JS Project</a></li>
 </ul>
-<h4>Database</h4>
+
+<h5>Database</h5>
 <ul>
   <li><a href="https://towardsdatascience.com/local-development-set-up-of-postgresql-with-docker-c022632f13ea">Local Development Set-Up of PostgreSQL with Docker</a></li>
   <li><a href="https://node-postgres.com/">Node-Postgres</a></li>
