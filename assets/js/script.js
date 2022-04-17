@@ -42,33 +42,36 @@ const loginForm = document.getElementById("login-form");
 regForm.addEventListener('submit', registerUser)
 loginForm.addEventListener('submit', signinUser)
 
-function createCookie(signinData) {
-    document.cookie = "id="+signinData.id+"; username="+signinData.username+"; password="+signinData.password;
+function createCookie(responseText) {
+    document.cookie = "user="+responseText;
 }
-
 
 function httpPost(url, body) {
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.open("POST", url, false); // false for synchronous request
     xmlHttp.setRequestHeader('Content-type', 'application/json; charset=UTF-8')
-    xmlHttp.send(body);
-    xmlHttp.onload = function () {
-        if (xmlHttp.status === 200) {
+    
+    xmlHttp.onload = function (xml, ev) {
+
+        if (xml.target.status === 200) {
             console.log("Successfully logged in!")
             createCookie(xmlHttp.responseText);
-            return xmlHttp.responseText;
+            window.location.href = '/html/profile.html';
         } 
 
-        if (xmlHttp.status === 201) {
+        if (xml.target.status === 201) {
             console.log("Successfully registered!")
-            return xmlHttp.responseText;
+            createCookie(xmlHttp.responseText);
+            return xml.responseText;
         }
         
-        if (xmlHttp.status === 401){
+        if (xml.target.status === 401){
             console.log("Unsuccessfully logged in");
-            return xmlHttp.responseText;
+            return xml.responseText;
         }
     }
+
+    xmlHttp.send(body);
 
 }
 
@@ -106,8 +109,6 @@ function signinUser(ev) {
     const body = JSON.stringify(user);
 
     httpPost("http://localhost:3000/login", body);
-
-    console.log("object");
 }
 
 

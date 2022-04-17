@@ -1,4 +1,20 @@
-console.log("It's working!");
+let user;
+
+function loadUser() {
+    const cookie = document.cookie;
+    const userCookie = cookie.split('='); // if cookie exists => ["user", "{...}"]; else => [""]
+
+    if (userCookie.length > 1) {
+        const userData = userCookie[1];
+        user = JSON.parse(userData);
+        getQuote()
+    } else {
+        window.location.href = '/index.html';
+    }
+}
+
+loadUser();
+
 
 //Quotes
 
@@ -22,37 +38,34 @@ async function getQuote() {
 
 newQuoteBtn.addEventListener("click", getQuote);
 
-getQuote()
-
-
 
 //------------------------------------------------------------
 
 const addQuote = document.getElementById("addToProfile");
-addQuote.addEventListener('submit', addQouteToProfile)
+addQuote.addEventListener('click', addQuoteToProfile)
 
-
-function httpPostQuote(url, body) {
+function addQuoteToProfile() {
     var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open("POST", url, false); // false for synchronous request
+    xmlHttp.open("POST", 'http://localhost:3000/quotes', false); // false for synchronous request
     xmlHttp.setRequestHeader('Content-type', 'application/json; charset=UTF-8')
-    xmlHttp.send(body);
+
     xmlHttp.onload = function () {
-        if (xmlHttp.status === 200) {
+        if (xmlHttp.status === 201) {
             console.log("Successfully logged in!")
             createCookie(xmlHttp.responseText);
             return xmlHttp.responseText;
         }
-        
-        if (xmlHttp.status === 404 || xmlHttp.status === 409){
-            console.log("Not found / Already exists");
+
+        if (xmlHttp.status === 409) {
+            console.log("Already exists");
+            alert("Quote already saved")
             return xmlHttp.responseText;
         }
     }
 
-}
-
-function addQouteToProfile(e) {
-    e.preventDefault()
+    xmlHttp.send(JSON.stringify({
+        'user_id': user.id,
+        'quote': quote.innerText
+    }));
 
 }

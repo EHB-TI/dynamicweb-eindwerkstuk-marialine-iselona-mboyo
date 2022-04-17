@@ -11,7 +11,7 @@ const pool = new Pool({
     host: 'localhost',
     database: 'quotes_db',
     password: 'mypassword',
-    port: '5432',
+    port: '5432'
 })
 
 const getUsers = (request, response) => {
@@ -23,13 +23,16 @@ const getUsers = (request, response) => {
     })
 }
 
+
 const getUserByUsernameAndPassword = (request, response) => {
     const {
         username,
         password
     } = request.body
 
-    pool.query('SELECT * FROM users WHERE username = $1 AND password = $2', [username, password], (error, result) => {
+    pool.query('SELECT * FROM users WHERE username = $1 AND password = $2', [
+        username, password
+    ], (error, result) => {
         if (error) {
             throw error
         }
@@ -48,22 +51,35 @@ const createUser = (request, response) => {
         password
     } = request.body
 
-    pool.query('INSERT INTO users (username, password) VALUES ($1, $2)', [username, password], (error, results) => {
+    pool.query('INSERT INTO users (username, password) VALUES ($1, $2)', [
+        username, password
+    ], (error, results) => {
         if (error) {
             throw error
         }
-        response.status(201).send(`User added with ID: ${JSON.stringify(results)}`)
+
+        pool.query('SELECT * FROM users WHERE username = $1 ORDER BY id ASC', [username], (error, results) => {
+            if (error) {
+                throw error
+            }
+            response.status(200).json(results.rows[0])
+        })
+
     })
 }
 
 
 const getQuotes = (request, response) => {
-    pool.query('SELECT * FROM quotes ORDER BY id ASC', (error, results) => {
+    const userId = request.params.userId;
+
+    pool.query('SELECT * FROM quotes WHERE user_id = $1 ORDER BY id ASC', [userId], (error, results) => {
         if (error) {
             throw error
         }
         response.status(200).json(results.rows)
     })
+
+
 }
 
 const postQuotes = (request, response) => {
@@ -71,17 +87,26 @@ const postQuotes = (request, response) => {
         user_id,
         quote
     } = request.body
-    
-    pool.query('SELECT * FROM quotes WHERE user_id = $1 AND quote = $2', [user_id, quote], (error, result) => {
+
+    pool.query('SELECT * FROM quotes WHERE user_id = $1 AND quote = $2', [
+        user_id, quote
+    ], (error, result) => {
         if (error) {
             throw error
         }
 
-        if (result.rows.length === 0) {
-            console.log(JSON.stringify(result));
-            response.status(404).send()
+        if (result.rows.length > 0) {
+            response.status(409).send()
+        } else {
+            pool.query('INSERT INTO quotes (user_id, quote) VALUES ($1, $2)', [
+                user_id, quote
+            ], (error, results) => {
+                if (error) {
+                    throw error
+                }
+                response.status(201).send();
+            })
         }
-        response.status(201).send(result.rows[0])
     })
 }
 
