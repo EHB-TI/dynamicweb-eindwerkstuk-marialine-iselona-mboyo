@@ -79,7 +79,7 @@ Login in first: <br>
 
 <h2 id="5">Acknolwledgments</h2>
 I would like to thank all the people who have helped me from near or far. My family and friends. <br>
-And of course, all those persons who made these documentations below. I wouldn't have learn oall of this without this.
+And of course, all those persons who made these documentations below. I wouldn't have learn all of this without this.
 
 <h4>Resources</h4>
 <h5>Profile</h5>
@@ -118,7 +118,7 @@ And of course, all those persons who made these documentations below. I wouldn't
   <li><a href="https://www.youtube.com/watch?v=2TjvDPNBgXo&ab_channel=GeekProbin">Random Quote Generator Using API | Vanilla JS Project</a></li>
 </ul>
 
-<h5>Database</h5>
+<h5>Database & Server</h5>
 <ul>
   <li><a href="https://towardsdatascience.com/local-development-set-up-of-postgresql-with-docker-c022632f13ea">Local Development Set-Up of PostgreSQL with Docker</a></li>
   <li><a href="https://node-postgres.com/">Node-Postgres</a></li>
