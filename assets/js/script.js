@@ -1,14 +1,3 @@
-//Error message
-
-function errorMessage(formEle, type, message) {
-    const messageEle = formEle.querySelector(".input_error_message")
-
-    messageEle.textContent = message;
-    messageEle.classList.remove("input_error_message");
-    messageEle.classList.add(`input_error_message--${type}`);
-}
-
-
 //Login and Create Account: form switching
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -46,10 +35,16 @@ document.addEventListener("DOMContentLoaded", () => {
 //     }
 // ]
 
-//Create a user account
+//Create a user account and login 
 
-const form = document.getElementById("reg-form");
-form.addEventListener('submit', registerUser)
+const regForm = document.getElementById("reg-form");
+const loginForm = document.getElementById("login-form");
+regForm.addEventListener('submit', registerUser)
+loginForm.addEventListener('submit', signinUser)
+
+function createCookie(signinData) {
+    document.cookie = "id="+signinData.id+"; username="+signinData.username+"; password="+signinData.password;
+}
 
 
 function httpPost(url, body) {
@@ -58,8 +53,19 @@ function httpPost(url, body) {
     xmlHttp.setRequestHeader('Content-type', 'application/json; charset=UTF-8')
     xmlHttp.send(body);
     xmlHttp.onload = function () {
+        if (xmlHttp.status === 200) {
+            console.log("Successfully logged in!")
+            createCookie(xmlHttp.responseText);
+            return xmlHttp.responseText;
+        } 
+
         if (xmlHttp.status === 201) {
-            console.log("Post successfully created!")
+            console.log("Successfully registered!")
+            return xmlHttp.responseText;
+        }
+        
+        if (xmlHttp.status === 401){
+            console.log("Unsuccessfully logged in");
             return xmlHttp.responseText;
         }
     }
@@ -86,31 +92,42 @@ function registerUser(ev) {
 }
 
 
+//Send data as JSON
+function signinUser(ev) {
+    ev.preventDefault()
+    const login_User = document.getElementById("username").value
+    const password_User = document.getElementById("password").value
+
+    const user = {
+        username: login_User,
+        password: password_User
+    }
+
+    const body = JSON.stringify(user);
+
+    httpPost("http://localhost:3000/login", body);
+
+    console.log("object");
+}
 
 
-//Login system
 // Route to another page onsubmit
 
-document.getElementById('myForm').addEventListener('submit', function (event) {
-    event.preventDefault();
-    let username = document.getElementById("username").value
-    let password = document.getElementById("password").value
+// document.getElementById('myForm').addEventListener('submit', function (event) {
+//     event.preventDefault();
+//     let username = document.getElementById("username").value
+//     let password = document.getElementById("password").value
 
-    // console.log("you're username is: " + username + " and your password is " +
-    //     password);
+//     // console.log("you're username is: " + username + " and your password is " +
+//     //     password);
 
-    for (i = 0; i < users.length; i++) {
-        if (username == users[i].username && password == users[i].password) {
-            console.log(username + " is logged in.");
-            window.location.href = 'html/profile.html';
-            return false;
-        }
-    }
-    console.log("Username or password is incorrect");
+//     for (i = 0; i < users.length; i++) {
+//         if (username == users[i].username && password == users[i].password) {
+//             console.log(username + " is logged in.");
+//             window.location.href = 'html/profile.html';
+//             return false;
+//         }
+//     }
+//     console.log("Username or password is incorrect");
 
-
-});
-
-//-------------------------------------------------------------------------------------
-
-//From profile to Quotes
+// });

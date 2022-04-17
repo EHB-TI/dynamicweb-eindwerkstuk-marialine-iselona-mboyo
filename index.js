@@ -31,3 +31,7 @@ app.get('/users', db.getUsers)
 app.post('/users', db.createUser)
 
 app.post('/login', db.getUserByUsernameAndPassword)
+
+app.get('/quotes', db.getQuotes)
+
+app.post('/quotes', db.postQuotes)

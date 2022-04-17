@@ -29,16 +29,16 @@ const getUserByUsernameAndPassword = (request, response) => {
         password
     } = request.body
 
-    pool.query('SELECT username, password FROM users WHERE username = $1 AND password = $2', [username, password], (error, result) => {
+    pool.query('SELECT * FROM users WHERE username = $1 AND password = $2', [username, password], (error, result) => {
         if (error) {
             throw error
         }
 
-        if (!result.rows.length) {
+        if (result.rows.length === 0) {
             console.log(JSON.stringify(result));
             response.status(401).send()
         }
-        response.status(200).send()
+        response.status(200).send(result.rows[0])
     })
 }
 
@@ -56,8 +56,39 @@ const createUser = (request, response) => {
     })
 }
 
+
+const getQuotes = (request, response) => {
+    pool.query('SELECT * FROM quotes ORDER BY id ASC', (error, results) => {
+        if (error) {
+            throw error
+        }
+        response.status(200).json(results.rows)
+    })
+}
+
+const postQuotes = (request, response) => {
+    const {
+        user_id,
+        quote
+    } = request.body
+    
+    pool.query('SELECT * FROM quotes WHERE user_id = $1 AND quote = $2', [user_id, quote], (error, result) => {
+        if (error) {
+            throw error
+        }
+
+        if (result.rows.length === 0) {
+            console.log(JSON.stringify(result));
+            response.status(404).send()
+        }
+        response.status(201).send(result.rows[0])
+    })
+}
+
 module.exports = {
     getUsers,
     createUser,
-    getUserByUsernameAndPassword
+    getUserByUsernameAndPassword,
+    getQuotes,
+    postQuotes
 }

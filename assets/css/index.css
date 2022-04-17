@@ -101,28 +101,3 @@ body{
     color: whitesmoke;
     background: #e9bea5;
 }
-
-/* .block__main {
-	min-width: 45vw;
-	position: absolute;
-	transition: all .8s ease;
-	backface-visibility: hidden;
-	box-shadow: 0rem 1.5rem 4rem rgba(0, 0, 0, 0.15);
-	border-radius: .5rem;
-	background-image: linear-gradient(to right bottom, #F6F0EA,#F1DFD1);
-} */
-
-.block__back {
-	transform: rotateY(180deg);
-}
-.header-back{
-    transform: rotateY(180deg);
-}
-
-.rotateF{
-transform: rotateY(-180deg);
-}
-
-.rotateB{
-transform: rotate(0deg);
-}
