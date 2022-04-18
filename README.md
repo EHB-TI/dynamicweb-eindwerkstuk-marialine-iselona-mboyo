@@ -128,5 +128,11 @@ And of course, all those persons who made these documentations below. I wouldn't
   <li><a href="https://www.codegrepper.com/code-examples/javascript/post+request+javascript">Post request javascript</a></li>
   <li><a href="https://code.tutsplus.com/articles/create-a-javascript-ajax-post-request-with-and-without-jquery--cms-39195">	
 Create a JavaScript AJAX Post Request: With and Without jQuery</a></li>
+  <li><a href="https://expressjs.com/">Express4.17.3
+Fast, unopinionated, minimalist web framework for Node.js</a></li>
+  <li><a href="https://code.tutsplus.com/articles/create-a-javascript-ajax-post-request-with-and-without-jquery--cms-39195">Create a JavaScript AJAX Post Request: With and Without jQuery</a></li>
+  <li><a href="http://treeindev.net/article/git-change-commit-name">4 Easy Steps to Change Author Name of a Commit After Push</a></li>
+  <li><a href="https://expressjs.com/en/guide/routing.html">Routing</a></li>
+  <li><a href="https://www.quirksmode.org/js/cookies.html">Cookies</a></li>
 </ul>
 
