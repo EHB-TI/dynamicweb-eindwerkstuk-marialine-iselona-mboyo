@@ -89,6 +89,7 @@ Or, you could create a new user and then try to Sign in with the one you created
   <li>Postgres</li>
   <li>Docker</li>
   <li>Unbuntu</li>
+  <li>Cookies</li>
 </ul>
 
 <h2 id="7">Authors</h2>
