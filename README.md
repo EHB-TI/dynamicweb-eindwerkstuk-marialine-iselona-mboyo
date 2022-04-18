@@ -45,7 +45,28 @@ I used Postgres, Docker and Ubuntu to create a little database. It is used for t
 API: <a href="https://forum.freecodecamp.org/t/free-api-inspirational-quotes-json-with-code-examples/311373">Free API - Inspirational quotes JSON with code examples</a> 
 <br>
 <h4>Run the Project</h4>
-Connect ti the database?
+Installing Node.js:
+You have to download Node.js <br>
+Open a new terminal in VS Code <br>
+
+```
+$ node -v
+```
+
+The system should display the Node.js version installed on your system.<br>
+You can do the same for NPM <br>
+
+```
+$ npm -v
+```
+
+Connect to the database/server?
+```
+$ cd workspace/dynamicweb-eindwerkstuk-marialine-iselona-mboyo/
+$ docker start d3911bd*****     //it will start the docker and server
+$ node index.js     //run the port 3000
+```
+
 <br>
 <h4>How to use the project</h4>
 Login in first: <br>
@@ -53,9 +74,8 @@ Login in first: <br>
 <ul>
   <li>Username: kelly; Password: pass</li>
   <li>Usename: emma; Password: pass</li>
-  <li>Username: dylan; Password: pass</li>
 </ul> 
- Or, you could create a new user and then try to Sign in with the one you created. After, it's easy and pretty much done. All you will have to do is to click on the "Quotes" button. And on the quote page, just click on "Next Quote", "Add to profile" or "Profile".
+Or, you could create a new user and then try to Sign in with the one you created. After, it's easy and pretty much done. All you will have to do is to click on the "Quotes" button. And on the quote page, just click on "Next Quote", "Add to profile" or "Profile".
 <br>
 
 <br>
