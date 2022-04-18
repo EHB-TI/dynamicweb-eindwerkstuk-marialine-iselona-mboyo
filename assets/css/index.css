@@ -1,61 +1,62 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
-body{
+body {
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: linear-gradient(to right bottom, #ed4264a8, #ffedbca8);;
+    background: linear-gradient(to right bottom, #ed4264a8, #ffedbca8);
+    ;
 }
 
-.container-quotes{
+.container-quotes {
     width: 650px;
     background: #f8f2f2;
     border-radius: 15px;
     padding: 25px 25px 20px;
 }
 
-.container-quotes header{
+.container-quotes header {
     font-size: 2rem;
     font-weight: 600;
     text-align: center;
 }
 
-.container-quotes .quote-box{
+.container-quotes .quote-box {
     margin: 30px 0;
 }
 
-.quote-box .content{
+.quote-box .content {
     display: flex;
     justify-content: center;
 }
 
-.content i{
+.content i {
     font-size: 15px;
 }
 
-.content i:first-child{
+.content i:first-child {
     margin: 5px 10px 0 0;
 }
 
-.content i:last-child{
+.content i:last-child {
     display: flex;
     align-items: flex-end;
-    margin:  0 0 5px 10px;
+    margin: 0 0 5px 10px;
 }
 
-.content .quote-text{
+.content .quote-text {
     font-size: 28px;
     text-align: center;
     word-break: break-all;
 }
 
-.quote-box .author{
+.quote-box .author {
     margin-top: 20px;
     display: flex;
     justify-content: flex-end;
@@ -63,41 +64,47 @@ body{
     font-style: italic;
 }
 
-.container-quotes .btn{
+.container-quotes .btn {
     border-top: 1px solid #f5f5f5;
     align-items: center;
     display: flex;
     justify-content: space-between;
 }
 
-.btn-click{
-    font-size:15px;
+.btn-click {
+    font-size: 15px;
+    color: rgb(49, 49, 49);
     border: none;
-	border-radius: 5px;
-	cursor:pointer;
-	padding: 13px 22px;
-	margin-top: 5px;
-	background: linear-gradient(to right bottom, #ed4264a8, #ffedbca8);
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 13px 22px;
+    margin-top: 5px;
+    background: linear-gradient(to right bottom, #ed4264a8, #ffedbca8);
     transition: all 0.2s ease;
 }
 
-.btn-click-newQuote{
-    font-size:15px;
+.btn-click-newQuote {
+    font-size: 15px;
+    color: rgb(49, 49, 49);
     border: none;
-	border-radius: 5px;
-	cursor:pointer;
-	padding: 13px 22px;
-	margin-top: 5px;
-	background: linear-gradient(to right bottom, #ed4264a8, #ffedbca8);
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 13px 22px;
+    margin-top: 5px;
+    background: linear-gradient(to right bottom, #ed4264a8, #ffedbca8);
     transition: all 0.2s ease;
 }
 
-.btn-click:hover{
+.btn-click:hover {
     color: whitesmoke;
     background: #e9bea5;
 }
 
-.btn-click-newQuote:hover{
+a:link {
+    text-decoration: none;
+}
+
+.btn-click-newQuote:hover {
     color: whitesmoke;
     background: #e9bea5;
 }

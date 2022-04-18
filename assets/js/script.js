@@ -22,18 +22,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 })
 
+
 //--------------------------------------------------------------------------------------
 
-
-// let users = [{
-//         username: "lina",
-//         password: "a"
-//     },
-//     {
-//         username: "john",
-//         password: "academy10"
-//     }
-// ]
 
 //Create a user account and login 
 
@@ -43,29 +34,29 @@ regForm.addEventListener('submit', registerUser)
 loginForm.addEventListener('submit', signinUser)
 
 function createCookie(responseText) {
-    document.cookie = "user="+responseText;
+    document.cookie = "user=" + responseText;
 }
 
 function httpPost(url, body) {
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.open("POST", url, false); // false for synchronous request
     xmlHttp.setRequestHeader('Content-type', 'application/json; charset=UTF-8')
-    
+
     xmlHttp.onload = function (xml, ev) {
 
         if (xml.target.status === 200) {
             console.log("Successfully logged in!")
             createCookie(xmlHttp.responseText);
             window.location.href = '/html/profile.html';
-        } 
+        }
 
         if (xml.target.status === 201) {
             console.log("Successfully registered!")
             createCookie(xmlHttp.responseText);
             return xml.responseText;
         }
-        
-        if (xml.target.status === 401){
+
+        if (xml.target.status === 401) {
             console.log("Unsuccessfully logged in");
             return xml.responseText;
         }
@@ -110,25 +101,3 @@ function signinUser(ev) {
 
     httpPost("http://localhost:3000/login", body);
 }
-
-
-// Route to another page onsubmit
-
-// document.getElementById('myForm').addEventListener('submit', function (event) {
-//     event.preventDefault();
-//     let username = document.getElementById("username").value
-//     let password = document.getElementById("password").value
-
-//     // console.log("you're username is: " + username + " and your password is " +
-//     //     password);
-
-//     for (i = 0; i < users.length; i++) {
-//         if (username == users[i].username && password == users[i].password) {
-//             console.log(username + " is logged in.");
-//             window.location.href = 'html/profile.html';
-//             return false;
-//         }
-//     }
-//     console.log("Username or password is incorrect");
-
-// });

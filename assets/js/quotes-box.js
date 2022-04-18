@@ -1,8 +1,13 @@
+//Quotes
+
+/* If someone uses the URL to acces the quote page
+he/she will be automatically be redirected to the login page */
+
 let user;
 
 function loadUser() {
     const cookie = document.cookie;
-    const userCookie = cookie.split('='); // if cookie exists => ["user", "{...}"]; else => [""]
+    const userCookie = cookie.split('='); // if cookie exists => ["user", "{...}"]; else => [""] object
 
     if (userCookie.length > 1) {
         const userData = userCookie[1];
@@ -17,7 +22,8 @@ function loadUser() {
 loadUser();
 
 
-//Quotes
+//-------------------------------------------------------------------------------------------------------------
+
 
 //Getting the quote, author & button of next quote
 const quote = document.querySelector("#text");
@@ -40,7 +46,11 @@ async function getQuote() {
 newQuoteBtn.addEventListener("click", getQuote);
 
 
-//------------------------------------------------------------
+//--------------------------------------------------------------------------------------------------------------
+
+
+/* This code is used to make that every time a user log in or when someone registers, and goes to the quote page
+he/she will be able to add quotes to his/her profile and it will also warn you if you already have added the quote */
 
 const addQuote = document.getElementById("addToProfile");
 addQuote.addEventListener('click', addQuoteToProfile)
@@ -53,8 +63,14 @@ function addQuoteToProfile() {
     xmlHttp.onload = function () {
         if (xmlHttp.status === 201) {
             console.log("Successfully logged in!")
-            createCookie(xmlHttp.responseText);
+            // createCookie(xmlHttp.responseText);
             return xmlHttp.responseText;
+        }
+
+        if (xml.status === 201) {
+            console.log("Successfully registered!")
+            // createCookie(xmlHttp.responseText);
+            return xml.responseText;
         }
 
         if (xmlHttp.status === 409) {

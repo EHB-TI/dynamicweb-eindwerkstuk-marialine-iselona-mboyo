@@ -1,3 +1,9 @@
+//Porfile
+
+
+/* If someone uses the URL to acces the quote page
+he/she will be automatically be redirected to the login page */
+
 function loadUser() {
     const cookie = document.cookie;
     const userCookie = cookie.split('='); // if cookie exists => ["user", "{...}"]; else => [""]
@@ -15,12 +21,19 @@ function loadUser() {
 loadUser();
 
 
+//-------------------------------------------------------------------------------------------------------------
+
+
+/* This code is used to make that every time a user log in, or when someone registers, 
+he/she will have acces to his/her profile page with the added quotes */
+
 function loadQuotes(userId) {
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.open("GET", 'http://localhost:3000/users/' + userId + '/quotes', false);
     xmlHttp.send();
     const quotes = JSON.parse(xmlHttp.responseText);
 
+    //The quoutes will appear in list
     var ul = document.createElement('ul');
     ul.setAttribute('id', 'quotes');
 
@@ -32,3 +45,6 @@ function loadQuotes(userId) {
         li.innerHTML = element.quote;
     });
 }
+
+
+//-------------------------------------------------------------------------------------------------------------

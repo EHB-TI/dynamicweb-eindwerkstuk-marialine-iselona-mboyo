@@ -204,14 +204,21 @@ header {
 .topbar {
     background-color: #faf4ea91;
     overflow: hidden;
+    display: flex;
+    justify-content: space-between;
 }
 
 .topbar a {
     float: right;
     color: #202020;
     text-align: center;
-    padding: 10px;
+    padding: 5px;
     text-decoration: none;
+}
+
+.btn {
+    background: #faf4ea52;
+    padding: 5px 10px;
 }
 
 .body-profile {
