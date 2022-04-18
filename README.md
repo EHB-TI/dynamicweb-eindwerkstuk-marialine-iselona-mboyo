@@ -155,5 +155,25 @@ Fast, unopinionated, minimalist web framework for Node.js</a></li>
   <li><a href="http://treeindev.net/article/git-change-commit-name">4 Easy Steps to Change Author Name of a Commit After Push</a></li>
   <li><a href="https://expressjs.com/en/guide/routing.html">Routing</a></li>
   <li><a href="https://www.quirksmode.org/js/cookies.html">Cookies</a></li>
+  <li><a href="https://stackoverflow.com/questions/11351135/create-ul-and-li-elements-in-javascript">Create ul and li elements in javascript.</a></li>
+  <li><a href="https://www.w3schools.com/js/js_ajax_http_send.asp">Cookies</a></li>
+  <li><a href="https://www.quirksmode.org/js/cookies.html">
+AJAX - XMLHttpRequest</a></li>
+  <li><a href="https://stackoverflow.com/questions/67938486/after-installing-npm-on-wsl-ubuntu-20-04-i-get-the-message-usr-bin-env-bash">After installing npm on WSL Ubuntu 20.04 I get the message "/usr/bin/env: ‘bash\r’: No such file or directory"</a></li>
+  <li><a href="https://stackoverflow.com/questions/948227/should-i-use-window-navigate-or-document-location-in-javascript">Should I use window.navigate or document.location in JavaScript?</a></li>
+  <li><a href="https://stackoverflow.com/questions/5142337/read-a-javascript-cookie-by-name">Read a javascript cookie by name</a></li>
+  <li><a href="https://gist.github.com/rendro/525bbbf85e84fa9042c2">parsecookie.js</a></li>
+  <li><a href="https://www.geekstrick.com/snippets/how-to-parse-cookies-in-javascript/">How to parse cookies in javascript?</a></li>
+  <li><a href="https://stackoverflow.com/questions/24865916/how-to-set-multiple-key-value-pairs-to-one-cookie">How to set multiple key-value pairs to one cookie?</a></li>
+  <li><a href="https://stackoverflow.com/questions/64643200/response-status-undefined-in-client-server-communication-javascript-nodejs-e">Response Status undefined in Client-Server-Communication - JavaScript, NodeJS, Express</a></li>
+  <li><a href="https://www.git-tower.com/learn/git/faq/change-author-name-email">How can I change the author name / email of a commit?</a></li>
+  <li><a href="https://stackoverflow.com/questions/3042437/how-to-change-the-commit-author-for-one-specific-commit">How to change the commit author for one specific commit?</a></li>
+  <li><a href="https://www.codegrepper.com/code-examples/javascript/javascript+send+https+request">“javascript send https request” Code Answer</a></li>
+  <li><a href="https://www.pgadmin.org/">pgAdmin</a></li>
+  <li><a href="https://hevodata.com/learn/pgadmin-docker/#t4">Understanding the PgAdmin Docker Setup Process</a></li>
+  <li><a href="https://stackoverflow.com/questions/25540711/docker-postgres-pgadmin-local-connection">docker postgres pgadmin local connection</a></li>
+  <li><a href="https://www.w3schools.com/js/js_cookies.asp">JavaScript Cookies</a></li>
+  <li><a href="https://rkstrdee.medium.com/how-to-add-ubuntu-tab-to-windows-10s-new-terminal-271eb6dfd8ee">How to add Ubuntu Tab to Windows 10’s New Terminal</a></li>
+  <li><a href="https://www.geeksforgeeks.org/how-to-display-error-without-alert-box-using-javascript/?fbclid=IwAR3rLNfRAWHxkgrBXyN_MpvOLrkSVlrohtPGIaSZ4nPTgz7yO3Tcp8ie1j4">How to display error without alert box using JavaScript ?</a></li>
 </ul>
 
