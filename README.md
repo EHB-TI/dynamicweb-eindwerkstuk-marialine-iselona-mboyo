@@ -45,7 +45,28 @@ I used Postgres, Docker and Ubuntu to create a little database. It is used for t
 API: <a href="https://forum.freecodecamp.org/t/free-api-inspirational-quotes-json-with-code-examples/311373">Free API - Inspirational quotes JSON with code examples</a> 
 <br>
 <h4>Run the Project</h4>
-Connect ti the database?
+Installing Node.js:
+You have to download Node.js <br>
+Open a new terminal in VS Code <br>
+
+```
+$ node -v
+```
+
+The system should display the Node.js version installed on your system.<br>
+You can do the same for NPM <br>
+
+```
+$ npm -v
+```
+
+Connect to the database/server?
+```
+$ cd workspace/dynamicweb-eindwerkstuk-marialine-iselona-mboyo/
+$ docker start d3911bd*****     //it will start the docker and server
+$ node index.js     //run the port 3000
+```
+
 <br>
 <h4>How to use the project</h4>
 Login in first: <br>
@@ -53,9 +74,8 @@ Login in first: <br>
 <ul>
   <li>Username: kelly; Password: pass</li>
   <li>Usename: emma; Password: pass</li>
-  <li>Username: dylan; Password: pass</li>
 </ul> 
- Or, you could create a new user and then try to Sign in with the one you created. After, it's easy and pretty much done. All you will have to do is to click on the "Quotes" button. And on the quote page, just click on "Next Quote", "Add to profile" or "Profile".
+Or, you could create a new user and then try to Sign in with the one you created. After, it's easy and pretty much done. All you will have to do is to click on the "Quotes" button. And on the quote page, just click on "Next Quote", "Add to profile" or "Profile".
 <br>
 
 <br>
@@ -79,7 +99,7 @@ Login in first: <br>
 
 <h2 id="5">Acknolwledgments</h2>
 I would like to thank all the people who have helped me from near or far. My family and friends. <br>
-And of course, all those persons who made these documentations below. I wouldn't have learn oall of this without this.
+And of course, all those persons who made these documentations below. I wouldn't have learn all of this without this.
 
 <h4>Resources</h4>
 <h5>Profile</h5>
@@ -118,7 +138,7 @@ And of course, all those persons who made these documentations below. I wouldn't
   <li><a href="https://www.youtube.com/watch?v=2TjvDPNBgXo&ab_channel=GeekProbin">Random Quote Generator Using API | Vanilla JS Project</a></li>
 </ul>
 
-<h5>Database</h5>
+<h5>Database & Server</h5>
 <ul>
   <li><a href="https://towardsdatascience.com/local-development-set-up-of-postgresql-with-docker-c022632f13ea">Local Development Set-Up of PostgreSQL with Docker</a></li>
   <li><a href="https://node-postgres.com/">Node-Postgres</a></li>
@@ -128,5 +148,11 @@ And of course, all those persons who made these documentations below. I wouldn't
   <li><a href="https://www.codegrepper.com/code-examples/javascript/post+request+javascript">Post request javascript</a></li>
   <li><a href="https://code.tutsplus.com/articles/create-a-javascript-ajax-post-request-with-and-without-jquery--cms-39195">	
 Create a JavaScript AJAX Post Request: With and Without jQuery</a></li>
+  <li><a href="https://expressjs.com/">Express4.17.3
+Fast, unopinionated, minimalist web framework for Node.js</a></li>
+  <li><a href="https://code.tutsplus.com/articles/create-a-javascript-ajax-post-request-with-and-without-jquery--cms-39195">Create a JavaScript AJAX Post Request: With and Without jQuery</a></li>
+  <li><a href="http://treeindev.net/article/git-change-commit-name">4 Easy Steps to Change Author Name of a Commit After Push</a></li>
+  <li><a href="https://expressjs.com/en/guide/routing.html">Routing</a></li>
+  <li><a href="https://www.quirksmode.org/js/cookies.html">Cookies</a></li>
 </ul>
 
